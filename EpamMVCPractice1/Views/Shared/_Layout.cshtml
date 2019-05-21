@@ -1,0 +1,44 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+
+    <header class="header">
+        <div class="header_title">Интересный блог</div>
+        <div class="header_image"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2f/Logo_TV_2015.svg/1200px-Logo_TV_2015.svg.png" alt="Alternate Text" /></div>
+    </header>
+
+    <div>
+        <div class="content_holder">
+            <div class="content">
+                @RenderBody()
+            </div>
+            <div class="right_sidebar">
+                <div>@Html.ActionLink("Главная", "Index", "Home")</div>
+                <div>@Html.ActionLink("Гостевая", "Guest", "Home")</div>
+                <div>@Html.ActionLink("Анкета", "Form", "Home")</div>
+            </div>
+        </div>
+    </div>
+
+   
+        
+
+
+    <footer>
+        <div>copyright,</div>
+        <div><a href="#">back to top</a></div>
+        
+    </footer>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

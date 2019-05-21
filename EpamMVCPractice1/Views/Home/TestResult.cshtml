@@ -1,0 +1,14 @@
+﻿
+@using EpamMVCPractice1.Helpers
+
+@{
+    ViewBag.Title = "TestResult";
+}
+
+<h2>TestResult</h2>
+
+<p>Имя: @ViewBag.Name</p>
+<p>Фамилия: @ViewBag.Surname</p>
+<p>Пол: @ViewBag.Sex</p>
+@Html.CreateL(ViewBag.sports as IEnumerable<string>)
+
