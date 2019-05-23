@@ -1,0 +1,28 @@
+﻿
+@{
+    ViewBag.Title = "Guest";
+}
+
+<div class="form_holder">
+    @using (Html.BeginForm())
+    {
+        @Html.Label("authorName", "Имя")<br />
+        @Html.TextBox("authorName", null, new { placeholder = "Введите имя", required = "required", @class = "form-control" })<br />
+        @Html.Label("com", "Ваш комментарий")<br />
+        @Html.TextArea("com", new { placeholder = "Оставьте свой отзыв.", @class = "textarea form-control", rows = "3", cols = "50" }) <br />
+        <button type="submit" class="btn btn-primary" name="Send">Отправить</button>
+    }
+</div>
+
+@foreach (var item in ViewBag.List)
+{
+    <div class="content_item">
+        <div class="content_item_title">@item.authorName</div>
+        <div class="content_item_date">@item.Date</div>
+        <div class="content_item_description">@item.commentContent</div>
+    </div>
+}
+
+    
+
+

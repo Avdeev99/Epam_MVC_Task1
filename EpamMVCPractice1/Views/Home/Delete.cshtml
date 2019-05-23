@@ -1,0 +1,12 @@
+﻿@model DAL.Entities.Article
+
+@{
+    ViewBag.Title = "DeleteArticle";
+}
+
+@using (Html.BeginForm())
+{
+    <h2>Вы действительно хотите удалить статью "@Model.Name"?</h2>
+    <button type="submit" class="btn btn-primary">Да</button> @Html.ActionLink("Нет", "Index", "Home", new { @class="btn btn-success"})
+}
+

@@ -1,0 +1,17 @@
+﻿@model DAL.Entities.Article
+
+@{
+    ViewBag.Title = "CreateArticle";
+}
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.HiddenFor(x => x.articleId)
+    @Html.HiddenFor(x => x.Date)
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control", placeholder = "Имя" })<br />
+    @Html.LabelFor(x => x.Content)
+    @Html.TextAreaFor(x => x.Content, new { @class = "form-control", placeholder = "Содержание", rows="9" })<br />
+    <button type="submit" class="btn btn-primary">Подтвердить</button>
+}
+

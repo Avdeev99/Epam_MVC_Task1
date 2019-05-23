@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "Form";
+}
+
+<h1>Тест</h1>
+
+@using (Html.BeginForm(FormMethod.Post))
+{
+    @Html.Label("Name", "Имя")<br />
+    @Html.TextBox("Name", null, new { placeholder = "Введите имя", @class = "form-control", required = "required" })<br />
+    @Html.Label("Surname", "Фамилия")<br />
+    @Html.TextBox("Surname", null, new { placeholder = "Введите фамилию.", @class = "form-control", required = "required" })<br />
+    @Html.Label("sex", "Пол") <br />
+
+
+    @Html.RadioButton("sex", "м", false, new { id = "m" })
+    @Html.Label("m", "М")<br />
+    @Html.RadioButton("sex", "ж", false, new { id = "f" })
+    @Html.Label("f", "Ж")<br /><br />
+    @Html.Label("favSport", "Выберите любимые виды спорта")<br />
+    <input id="football" type="checkbox" name="favSport" value="football" />
+    @Html.Label("football", "Футбол")<br />
+    <input id="basketball" type="checkbox" name="favSport" value="basketball" />
+    @Html.Label("basketball", "Баскетбол")<br />
+
+    <input id="tennis" type="checkbox" name="favSport" value="Tennis" />
+    @Html.Label("tennis", "Теннис")<br /><br />
+
+    <button type="submit" class="btn btn-primary">Отправить</button>
+}
+

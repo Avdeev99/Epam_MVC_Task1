@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
-namespace EpamMVCPractice1.Models
+namespace DAL.Entities
 {
     public class Article
     {

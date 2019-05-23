@@ -7,13 +7,23 @@
 }
 
 
-.body {
+body {
     padding: 0;
     margin: 0;
+    height: 100%;
+    position: relative!important;
+    min-height: 100vh;
+    padding-bottom: 30px;
 }
 
-.header, footer{
+.header, footer {
     padding: 10px 15px;
+    width: 100%;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
 }
 
 .header {
